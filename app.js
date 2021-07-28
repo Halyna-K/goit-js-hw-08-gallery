@@ -124,6 +124,22 @@ function onOverlayClick(e) {
     onCloseLightbox();
   }
 }
+function onLeftClick(e) {
+  e.preventDefault();
+  if (e.key === "ArrowLeft") {
+  }
+  return;
+}
+window.addEventListener("keyup", onLeftClick);
+
+function onRightClick(e) {
+  e.preventDefault();
+  if (e.key === "ArrowRight") {
+  }
+  return;
+}
+window.addEventListener("keyup", onRightClick);
+
 //  refs.gallery.addEventListener("click", toggleLightbox);
 //  refs.buttonClose.addEventListener("click", toggleLightbox);
 //  window.addEventListener("keyup", closeLightboxESC);
