@@ -92,7 +92,7 @@ refs.gallery.append(...elements);
 // console.log(...elements);
 
 refs.gallery.addEventListener("click", onOpenLightbox);
-refs.lightbox.addEventListener("click", onCloseLightbox);
+refs.buttonClose.addEventListener("click", onCloseLightbox);
 refs.overlay.addEventListener("click", onOverlayClick);
 
 function onOpenLightbox(e) {
@@ -120,7 +120,7 @@ function closeLightboxESC(e) {
 }
 
 function onOverlayClick(e) {
-  if (e.currentTarget === e.target) {
+  if (e.currentTarget !== e.target) {
     onCloseLightbox();
   }
 }
